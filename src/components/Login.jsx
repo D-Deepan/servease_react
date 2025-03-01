@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import AccountCircleSharpIcon from '@mui/icons-material/AccountCircleSharp';
-import Link from '@mui/material/Link';
+import { Link } from 'react-router-dom';
 import { useRef, useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import useAuth from '../hooks/useAuth'
@@ -117,7 +117,7 @@ function Login() {
             mb: 2,
           }}
         >
-          <Link href="/register" sx={{ textDecoration: 'none', color: 'primary.main' }}>
+          <Link to="/register" sx={{ textDecoration: 'none', color: 'primary.main' }}>
           Register here
           </Link>
         </Box>
