@@ -117,9 +117,6 @@ function Login() {
             mb: 2,
           }}
         >
-          <Link href="#" sx={{ textDecoration: 'none', color: 'primary.main' }}>
-            Forgot Password
-          </Link>
           <Link href="/register" sx={{ textDecoration: 'none', color: 'primary.main' }}>
           Register here
           </Link>
