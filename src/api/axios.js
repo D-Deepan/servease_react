@@ -1,5 +1,5 @@
 import axios from 'axios';
- const BASE_URL = 'https://servease-api.onrender.com';
+ const BASE_URL = 'https://servease-express.onrender.com';
 export default axios.create({
     baseURL : BASE_URL
 });
