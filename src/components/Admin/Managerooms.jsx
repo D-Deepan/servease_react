@@ -220,7 +220,7 @@ function ManageRooms() {
                     />
                   </TableCell>
                   <TableCell>
-                  {!room.isBooked && ( // Only render the button if the room is not booked
+                    {!room.isBooked ? ( // If the room is not booked, render the Delete button
                       <Button
                         variant="contained"
                         color="error"
@@ -228,11 +228,15 @@ function ManageRooms() {
                       >
                         Delete
                       </Button>
-                    ):(  <Button
-                      variant="contained"
-                      color="error" // Change color based on room status
-                      disabled={true} // Disable the button if the room is booked
-                    />)}
+                    ) : ( // If the room is booked, render a disabled button
+                      <Button
+                        variant="contained"
+                        color="error"
+                        disabled={true} // Disable the button if the room is booked
+                      >
+                       Delete
+                      </Button>
+                    )}
                   </TableCell>
                 </TableRow>
               ))}
