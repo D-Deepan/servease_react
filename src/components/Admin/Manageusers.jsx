@@ -215,8 +215,8 @@ function Manageusers() {
                   />
                 </TableCell>
                 <TableCell>
-                  {user.roomno ? (
-                    <Chip label={user.roomno} color="success" variant="outlined" />
+                  {user.roomNo ? (
+                    <Chip label={user.roomNo} color="success" variant="outlined" />
                   ) : (
                     <Chip label="Not allocated" color="error" variant="outlined" />
                   )}
