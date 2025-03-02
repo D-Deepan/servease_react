@@ -64,7 +64,7 @@ function Register() {
         <section>
           <h1>Registration Successful!</h1>
           <p>
-            <Link href="/Login">Login here</Link>
+            <Link to="/Login">Login here</Link>
           </p>
         </section>
       ) : (
