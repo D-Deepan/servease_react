@@ -86,6 +86,7 @@ function ManageRooms() {
     // Delete a room
     const deleteRoom = async (roomNo) => {
       try {
+        
         await axiosprivate.delete(deleteroomsurl, {
           headers: {
             'Content-Type': 'application/json',
@@ -219,13 +220,19 @@ function ManageRooms() {
                     />
                   </TableCell>
                   <TableCell>
-                    <Button
+                  {!room.isBooked && ( // Only render the button if the room is not booked
+                      <Button
+                        variant="contained"
+                        color="error"
+                        onClick={() => deleteRoom(room.roomNo)}
+                      >
+                        Delete
+                      </Button>
+                    ):(  <Button
                       variant="contained"
-                      color="error"
-                      onClick={() => deleteRoom(room.roomNo)}
-                    >
-                      Delete
-                    </Button>
+                      color="error" // Change color based on room status
+                      disabled={true} // Disable the button if the room is booked
+                    />)}
                   </TableCell>
                 </TableRow>
               ))}
