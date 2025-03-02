@@ -220,21 +220,13 @@ function ManageRooms() {
                     />
                   </TableCell>
                   <TableCell>
-                    {!room.isBooked ? ( // If the room is not booked, render the Delete button
+                    {!room.isBooked && ( // Only render the button if the room is not booked
                       <Button
                         variant="contained"
                         color="error"
                         onClick={() => deleteRoom(room.roomNo)}
                       >
                         Delete
-                      </Button>
-                    ) : ( // If the room is booked, render a disabled button
-                      <Button
-                        variant="contained"
-                        color="error"
-                        disabled={true} // Disable the button if the room is booked
-                      >
-                       Delete
                       </Button>
                     )}
                   </TableCell>
