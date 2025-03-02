@@ -40,10 +40,11 @@ const useRefreshtoken = () => {
     const { setauth } = useAuth();
 
     const refresh = async () => {
+        console.log('befre refresh');
         const response = await axios.get('/users/refresh', {
             withCredentials: true
         });
-        console.log(response.data);
+        console.log('after refresh');
         setauth(prev => {
             console.log(JSON.stringify(prev));
             console.log(response.data.accessToken);
